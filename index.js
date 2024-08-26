@@ -7,7 +7,7 @@ const middlewares = jsonServer.defaults();
 // Use CORS middleware
 
 const corsOptions = {
-    origin: 'http://your-frontend-domain.com', // Replace with your front-end domain
+    origin: 'https://e-book-mart.vercel.app/', // Replace with your front-end domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true
   };
@@ -17,7 +17,8 @@ const corsOptions = {
 server.use(middlewares);
 server.use(router);
 
-const port = process.env.PORT || 3000;
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
-});
+// const port = process.env.PORT || 3000;
+// server.listen(port, () => {
+//   console.log(`JSON Server is running on port ${port}`);
+// });
+module.exports = app;
