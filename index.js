@@ -69,12 +69,4 @@ app.get('/books', async (req, res) => {
 });
 
 // Export handler for Vercel
-module.exports = (req, res) => {
-  // Use express middleware
-  return new Promise((resolve, reject) => {
-    app(req, res, (err) => {
-      if (err) return reject(err);
-      resolve();
-    });
-  });
-};
+module.exports = app;
