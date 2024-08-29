@@ -50,6 +50,14 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mtanveercs:mtanveercs
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
+  app.get('/', async (req, res) => {
+    try {
+     
+      res.json('books');
+    } catch (err) {
+      res.status(500).send(err.message);
+    }
+  });
 // Endpoint to get all books
 app.get('/books', async (req, res) => {
   try {
