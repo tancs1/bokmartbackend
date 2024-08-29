@@ -46,12 +46,12 @@ app.use(cors(corsOptions)); // Use cors middleware with options
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/booksdb')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://mtanveercs:mtanveercs@cluster0.8exq3.mongodb.net/bookmart')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
 // Endpoint to get all books
-app.get('/api/books', async (req, res) => {
+app.get('/books', async (req, res) => {
   try {
     const books = await Book.find();
     res.json(books);
