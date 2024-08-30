@@ -36,7 +36,7 @@ const port = process.env.PORT || 3000;
 
 // CORS options
 const corsOptions = {
-  origin: 'https://e-book-mart.vercel.app/', // Replace with your frontend URL
+  origin: 'https://e-book-mart.vercel.app', // Replace with your frontend URL
   methods: 'GET,POST,PUT,DELETE', // Allowed methods
   allowedHeaders: 'Content-Type,Authorization', // Allowed headers
 };
